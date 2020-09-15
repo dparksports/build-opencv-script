@@ -16,4 +16,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_GENERATE_PKGCONFIG=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules \
     -D BUILD_EXAMPLES=ON ..
+    
+pkg-config --modversion opencv4
+
+python3 -c "import cv2; print(cv2.__version__)"
+
 ```
