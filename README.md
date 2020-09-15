@@ -3,6 +3,10 @@
 ## ubuntu 18.04 / Opencv 4.4.x
 
 ```sh
+
+sudo apt install python3-opencv
+python3 -c "import cv2; print(cv2.__version__)"
+
 sudo apt install build-essential cmake git pkg-config libgtk-3-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev \
@@ -18,7 +22,6 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_EXAMPLES=ON ..
     
 pkg-config --modversion opencv4
-
 python3 -c "import cv2; print(cv2.__version__)"
 
 ```
