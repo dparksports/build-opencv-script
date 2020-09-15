@@ -2,7 +2,7 @@
 
 ## ubuntu 18.04 / Opencv 4.4.x
 
-''
+```sh
 sudo apt install build-essential cmake git pkg-config libgtk-3-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev \
@@ -16,4 +16,4 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_GENERATE_PKGCONFIG=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules \
     -D BUILD_EXAMPLES=ON ..
-''
+```
