@@ -1,4 +1,4 @@
-# build-opencv-script
+# build opencv 4 from scratch on ubuntu
 
 ## ubuntu 18.04 / Opencv 4.x
 
