@@ -59,6 +59,8 @@ python3 -c "import cv2; print(cv2.__version__)"
 -DPYTHON_EXECUTABLE=$(python -c "import sys; print(sys.executable)")
 -DPYTHON_INCLUDE_DIR=$(python -c "import sysconfig; print(sysconfig.get_config_var('INCLUDEPY'))")
 -DPYTHON_PACKAGES_PATH=$(python -c "import sysconfig; print(sysconfig.get_config_var('LIBDEST'))")
+-DPYTHON3_NUMPY_INCLUDE_DIRS="~/miniconda/lib/python3.6/site-packages/numpy/core/include" \
+
 ```
 
 ```sh
