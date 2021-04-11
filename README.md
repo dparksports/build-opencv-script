@@ -55,6 +55,20 @@ python3 -c "import cv2; print(cv2.__version__)"
 ```
 
 ```sh
+-DCMAKE_INSTALL_PREFIX=$(python -c "import sys; print(sys.prefix)")
+-DPYTHON_EXECUTABLE=$(python -c "import sys; print(sys.executable)")
+-DPYTHON_INCLUDE_DIR=$(python -c "import sysconfig; print(sysconfig.get_config_var('INCLUDEPY'))")
+-DPYTHON_PACKAGES_PATH=$(python -c "import sysconfig; print(sysconfig.get_config_var('LIBDEST'))")
+```
+
+```sh
+python3 -c "import sys; print(sys.prefix)"
+which python3
+python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())"
+python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+```
+
+```sh
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \
 -D PYTHON_LIBRARY=~/miniconda/envs/opencv4/lib/ \
 -D PYTHON_INCLUDE_DIRS=~/miniconda/envs/opencv4/include \
