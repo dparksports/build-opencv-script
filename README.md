@@ -85,3 +85,10 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \
 -D PYTHON_EXECUTABLE=~/miniconda/envs/opencv4/bin/python \
 -D BUILD_EXAMPLES=ON .. > cmake-cuda-dnn.log
 ```
+
+```sh
+sudo apt-get install libfreeimage3 libfreeimage-dev
+# fatal error: FreeImage.h: No such file or directory
+
+
+```
