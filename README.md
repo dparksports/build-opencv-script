@@ -1,5 +1,13 @@
 # build opencv 4 from scratch on ubuntu
 
+## ubuntu 18.04 / OpenCV 4 / Conda
+```sh
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_PREFIX=$(python3 -c "import sys; print(sys.prefix)") -DPYTHON_EXECUTABLE=$(python3 -c "import sys; print(sys.executable)") -D PYTHON_LIBRARY=~/miniconda/envs/opencv4/lib/ -DPYTHON_INCLUDE_DIR=$(python3 -c "import sysconfig; print(sysconfig.get_config_var('INCLUDEPY'))") -DPYTHON3_NUMPY_INCLUDE_DIRS=$(python3 -c "import numpy; print(numpy.get_include())") -D BUILD_opencv_python3=ON -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D OPENCV_ENABLE_NONFREE=ON -D WITH_CUDA=ON -D WITH_CUDNN=ON -D OPENCV_DNN_CUDA=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D CUDA_ARCH_BIN=7.5 -D WITH_CUBLAS=1 -D OPENCV_EXTRA_MODULES_PATH='/home/rq/Downloads/opencv_contrib-4.5.2/modules' -D HAVE_opencv_python3=ON -D BUILD_EXAMPLES=ON -D OPENCV_GENERATE_PKGCONFIG=ON ..
+
+
+```
+
+
 ## ubuntu 18.04 / Opencv 4.x
 
 ```sh
@@ -72,3 +80,6 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D PYTHON_L
 sudo apt-get install libfreeimage3 libfreeimage-dev
 # fatal error: FreeImage.h: No such file or directory
 ```
+
+
+
