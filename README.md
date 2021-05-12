@@ -1,4 +1,12 @@
-# build opencv 4 from scratch on ubuntu
+# build opencv 4 with CUDA on linux
+
+See an updated version here.
+https://github.com/dparksports/build-opencv-from-scratch/blob/master/OpenCV4_RTX_virtualenv.md
+
+
+
+## Deprecated 
+
 
 ## ubuntu 18.04 / OpenCV 4 / Conda
 ```sh
